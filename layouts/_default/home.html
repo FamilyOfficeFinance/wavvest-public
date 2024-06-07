@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <header>
+    <h1>Wavvest Holdings Inc. - Public Document Repository</h1>
+  </header>
+  <hr>
+  {{ .Content }}
+  <ul>
+  {{ range site.RegularPages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </li>
+  {{ end }}
+  </ul>
+{{ end }}
